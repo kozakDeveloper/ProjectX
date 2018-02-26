@@ -46,7 +46,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'app in Angular 2';
+        this.title = 'ProjectX';
     }
     AppComponent = __decorate([
         core_1.Component({
