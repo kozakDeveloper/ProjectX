@@ -123,7 +123,7 @@ webpackJsonp(["vendor"],{
  * The `PlatformLocation` class is used directly by all implementations of {\@link LocationStrategy}
  * when they need to interact with the DOM apis like pushState, popState, etc...
  *
- * {\@link LocationStrategy} in turn is used by the {\@link Location} service which is used directly
+ * {\@link LocationStrategy} in turn is used by the {\@link Location} com.projectX.service which is used directly
  * by the {\@link Router} in order to navigate between routes. Since all interactions between {\@link
  * Router} /
  * {\@link Location} / {\@link LocationStrategy} and DOM apis flow through the `PlatformLocation`
@@ -170,7 +170,7 @@ var LOCATION_INITIALIZED = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inje
  * from the browser's URL. Angular provides two strategies:
  * {\@link HashLocationStrategy} and {\@link PathLocationStrategy}.
  *
- * This is used under the hood of the {\@link Location} service.
+ * This is used under the hood of the {\@link Location} com.projectX.service.
  *
  * Applications should use the {\@link Router} or {\@link Location} services to
  * interact with application route state.
@@ -230,12 +230,12 @@ var APP_BASE_HREF = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionTo
  */
 
 /**
- * \@whatItDoes `Location` is a service that applications can use to interact with a browser's URL.
+ * \@whatItDoes `Location` is a com.projectX.service that applications can use to interact with a browser's URL.
  * \@description
  * Depending on which {\@link LocationStrategy} is used, `Location` will either persist
  * to the URL's path or the URL's hash segment.
  *
- * Note: it's better to use {\@link Router#navigate} service to trigger route changes. Use
+ * Note: it's better to use {\@link Router#navigate} com.projectX.service to trigger route changes. Use
  * `Location` only if you need to interact with or create normalized URLs outside of
  * routing.
  *
@@ -551,7 +551,7 @@ function _stripIndexHtml(url) {
  * \@whatItDoes Use URL hash for storing application location data.
  * \@description
  * `HashLocationStrategy` is a {\@link LocationStrategy} used to configure the
- * {\@link Location} service to represent its state in the
+ * {\@link Location} com.projectX.service to represent its state in the
  * [hash fragment](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax)
  * of the browser's URL.
  *
@@ -705,7 +705,7 @@ var HashLocationStrategy = /** @class */ (function (_super) {
  * \@whatItDoes Use URL for storing application location data.
  * \@description
  * `PathLocationStrategy` is a {\@link LocationStrategy} used to configure the
- * {\@link Location} service to represent its state in the
+ * {\@link Location} com.projectX.service to represent its state in the
  * [path](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax) of the
  * browser's URL.
  *
@@ -2615,7 +2615,7 @@ var NgForOf = /** @class */ (function () {
          */
         function (fn) {
             if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["isDevMode"])() && fn != null && typeof fn !== 'function') {
-                // TODO(vicb): use a log service once there is a public one available
+                // TODO(vicb): use a log com.projectX.service once there is a public one available
                 if (/** @type {?} */ (console) && /** @type {?} */ (console.warn)) {
                     console.warn("trackBy must be a function, but received " + JSON.stringify(fn) + ". " +
                         "See https://angular.io/docs/ts/latest/api/common/index/NgFor-directive.html#!#change-propagation for more information.");
@@ -17628,7 +17628,7 @@ var _Visitor = /** @class */ (function () {
                     if (!i18nCommentsWarned && /** @type {?} */ (console) && /** @type {?} */ (console.warn)) {
                         i18nCommentsWarned = true;
                         var /** @type {?} */ details = comment.sourceSpan.details ? ", " + comment.sourceSpan.details : '';
-                        // TODO(ocombe): use a log service once there is a public one available
+                        // TODO(ocombe): use a log com.projectX.service once there is a public one available
                         console.warn("I18n comments are deprecated, use an <ng-container> element instead (" + comment.sourceSpan.start + details + ")");
                     }
                     this._inI18nBlock = true;
@@ -39220,7 +39220,7 @@ var StaticReflector = /** @class */ (function () {
                                     if (staticSymbol === self.injectionToken || staticSymbol === self.opaqueToken) {
                                         // if somebody calls new InjectionToken, don't create an InjectionToken,
                                         // but rather return the symbol to which the InjectionToken is assigned to.
-                                        // OpaqueToken is supported too as it is required by the language service to
+                                        // OpaqueToken is supported too as it is required by the language com.projectX.service to
                                         // support v4 and prior versions of Angular.
                                         return context;
                                     }
@@ -42143,7 +42143,7 @@ var Extractor = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 // This file is not used to build this module. It is only used during editing
-// by the TypeScript language service and during build for verification. `ngc`
+// by the TypeScript language com.projectX.service and during build for verification. `ngc`
 // replaces this file with production index.ts when it rewrites private symbol
 // names.
 
@@ -46112,7 +46112,7 @@ function _throwError() {
     throw new Error("Runtime compiler is not loaded");
 }
 /**
- * Low-level service for running the angular compiler during runtime
+ * Low-level com.projectX.service for running the angular compiler during runtime
  * to create {\@link ComponentFactory}s, which
  * can later be used to create and render a Component instance.
  *
@@ -46746,9 +46746,9 @@ var EventEmitter = /** @class */ (function (_super) {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * An injectable service for executing work inside or outside of the Angular zone.
+ * An injectable com.projectX.service for executing work inside or outside of the Angular zone.
  *
- * The most common use of this service is to optimize performance when starting a work consisting of
+ * The most common use of this com.projectX.service is to optimize performance when starting a work consisting of
  * one or more asynchronous tasks that don't require UI updates or error handling to be handled by
  * Angular. Such tasks can be kicked off via {\@link #runOutsideAngular} and if needed, these tasks
  * can reenter the Angular zone via {\@link #run}.
@@ -47034,7 +47034,7 @@ var NgZone = /** @class */ (function () {
      * Any future tasks or microtasks scheduled from within this function will continue executing from
      * outside of the Angular zone.
      *
-     * Use {@link #run} to reenter the Angular zone and do work that updates the application model.
+     * Use {@link #run} to reenter the Angular zone and do work that updates the application com.projectX.model.
      */
     /**
      * Executes the `fn` function synchronously in Angular's parent zone and returns value returned by
@@ -47047,7 +47047,7 @@ var NgZone = /** @class */ (function () {
      * Any future tasks or microtasks scheduled from within this function will continue executing from
      * outside of the Angular zone.
      *
-     * Use {\@link #run} to reenter the Angular zone and do work that updates the application model.
+     * Use {\@link #run} to reenter the Angular zone and do work that updates the application com.projectX.model.
      * @template T
      * @param {?} fn
      * @return {?}
@@ -47063,7 +47063,7 @@ var NgZone = /** @class */ (function () {
      * Any future tasks or microtasks scheduled from within this function will continue executing from
      * outside of the Angular zone.
      *
-     * Use {\@link #run} to reenter the Angular zone and do work that updates the application model.
+     * Use {\@link #run} to reenter the Angular zone and do work that updates the application com.projectX.model.
      * @template T
      * @param {?} fn
      * @return {?}
@@ -47234,7 +47234,7 @@ var NoopNgZone = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * The Testability service provides testing hooks that can be accessed from
+ * The Testability com.projectX.service provides testing hooks that can be accessed from
  * the browser and by services such as Protractor. Each bootstrapped Angular
  * application on the page will have an instance of Testability.
  * \@experimental
@@ -47559,7 +47559,7 @@ var TestabilityRegistry = /** @class */ (function () {
     return TestabilityRegistry;
 }());
 /**
- * Adapter interface for retrieving the `Testability` service associated for a
+ * Adapter interface for retrieving the `Testability` com.projectX.service associated for a
  * particular context.
  *
  * \@experimental Testability apis are primarily intended to be used by e2e test tool vendors like
@@ -48481,9 +48481,9 @@ var Renderer = /** @class */ (function () {
 }());
 var Renderer2Interceptor = new InjectionToken('Renderer2Interceptor');
 /**
- * Injectable service that provides a low-level interface for modifying the UI.
+ * Injectable com.projectX.service that provides a low-level interface for modifying the UI.
  *
- * Use this service to bypass Angular's templating and make custom UI changes that can't be
+ * Use this com.projectX.service to bypass Angular's templating and make custom UI changes that can't be
  * expressed declaratively. For example if you need to set a property or an attribute whose name is
  * not statically known, use {\@link Renderer#setElementProperty setElementProperty} or
  * {\@link Renderer#setElementAttribute setElementAttribute} respectively.
@@ -51274,7 +51274,7 @@ var KeyValueChangeRecord_ = /** @class */ (function () {
  */
 
 /**
- * A repository of different iterable diffing strategies used by NgFor, NgClass, and others.
+ * A com.projectX.repository of different iterable diffing strategies used by NgFor, NgClass, and others.
  * \@stable
  */
 var IterableDiffers = /** @class */ (function () {
@@ -51446,7 +51446,7 @@ function getTypeNameForDebugging(type) {
  */
 
 /**
- * A repository of different Map diffing strategies used by NgClass, NgStyle, and others.
+ * A com.projectX.repository of different Map diffing strategies used by NgClass, NgStyle, and others.
  * \@stable
  */
 var KeyValueDiffers = /** @class */ (function () {
@@ -64263,7 +64263,7 @@ var BrowserPlatformLocation = /** @class */ (function (_super) {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * A service that can be used to get and add meta tags.
+ * A com.projectX.service that can be used to get and add meta tags.
  *
  * \@experimental
  */
@@ -64603,11 +64603,11 @@ var BrowserGetTestability = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * A service that can be used to get and set the title of a current HTML document.
+ * A com.projectX.service that can be used to get and set the title of a current HTML document.
  *
  * Since an Angular application can't be bootstrapped on the entire HTML document (`<html>` tag)
  * it is not possible to bind to the `text` property of the `HTMLTitleElement` elements
- * (representing the `<title>` tag). Instead, this service can be used to set and get the current
+ * (representing the `<title>` tag). Instead, this com.projectX.service can be used to set and get the current
  * title value.
  *
  * \@experimental
